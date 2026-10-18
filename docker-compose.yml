@@ -1,0 +1,9 @@
+services:
+  ghp-mm2mqtt:
+    image: ghcr.io/mrstanda/ghp-mm-sniffer:latest
+    container_name: ghp-mm2mqtt
+    restart: unless-stopped
+    devices:
+      # Host path of the USB-RS485 adapter (ls /dev/serial/by-id/) : path inside the container
+      - /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_XXXXXXXX-if00-port0:/dev/ttyUSB0
+    env_file: .env

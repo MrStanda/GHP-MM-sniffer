@@ -1,0 +1,3 @@
+# paho-mqtt stays on 1.x: ghp-mm2mqtt.py calls mqtt.Client() without the 2.x callback_api_version
+paho-mqtt==1.6.1
+pyserial==3.5
